@@ -2,7 +2,7 @@
 name: suno-engineer
 description: Constructs technical Suno V5/V5.5 style prompts, selects genres, and optimizes generation settings. Use when creating or refining Suno prompts for track generation.
 argument-hint: <track-file-path or "create prompt for [concept]">
-model: claude-opus-4-6
+model: claude-opus-4-7
 prerequisites:
   - lyric-writer
 allowed-tools:
@@ -79,7 +79,7 @@ In Style Prompt, put vocal description FIRST:
 Check for custom Suno preferences:
 
 ### Loading Override
-1. Call `load_override("suno-preferences.md")` — returns override content if found (auto-resolves path from config)
+1. Call `load_override("suno-preferences.md")` — returns override content if found (auto-resolves path from config). **Why:** user-specific genre mappings (e.g. "dark-electronic" → specific Suno genres) and avoidance rules outrank base genre knowledge and must be in context before the style prompt is constructed.
 2. If found: read and incorporate preferences
 3. If not found: use base Suno knowledge only
 
@@ -178,7 +178,7 @@ Suno V5 handles exclusions reliably. Use the **Exclude Styles** section in the t
 - **Max 2–4 items** — over-specification dilutes the effect
 - **Simple "no [element]" format**: `no drums`, `no electric guitar`, `no autotune`
 - **Append to Style Box when pasting** — combine Style Box + Exclude Styles into one Suno field
-- **Leave empty if not needed** — most tracks won't need exclusions
+- **Always emit the section, even when no exclusions apply** — write `### Exclude Styles` followed by `(none)` so downstream tools can confirm the field was considered, not silently skipped. Most tracks land here.
 
 **Auto-populate guidance:** Consider whether genre/instrumentation context implies exclusions:
 - Acoustic folk → `no electric instruments, no drums`
