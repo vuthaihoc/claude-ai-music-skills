@@ -68,9 +68,9 @@ Skills declare which Claude model they need. Creative work that directly impacts
 
 | Tier | Model | Skills | Rationale |
 |------|-------|--------|-----------|
-| Creative | Opus 4.7 | 6 | Lyrics, Suno prompts, album concepts, legal/verification research — output quality defines the music |
-| Reasoning | Sonnet 4.6 | 29 | Research coordination, pronunciation analysis, most workflows |
-| Mechanical | Haiku 4.5 | 18 | Imports, validation, clipboard, help — speed over creativity |
+| Creative | Opus 4.8 | 7 | Lyrics, Suno prompts, album concepts, legal/verification research — output quality defines the music |
+| Reasoning | Sonnet 4.6 | 30 | Research coordination, pronunciation analysis, most workflows |
+| Mechanical | Haiku 4.5 | 16 | Imports, validation, clipboard, help — speed over creativity |
 
 This project pushes Claude Code hard — multi-agent research, real-time audio analysis, sub-agent orchestration across model tiers. It works best on the Max plan. The standard Pro plan will hit rate limits during multi-track sessions.
 
@@ -113,7 +113,7 @@ Nothing ships without passing gates:
 ## Project Structure
 
 ```
-skills/              51 skill definitions (markdown + YAML frontmatter)
+skills/              53 skill definitions (markdown + YAML frontmatter)
 servers/             MCP server (Python, 80+ tools)
 tools/               Audio mastering, promo videos, sheet music, cloud uploads
 reference/           46+ docs — Suno guides, mastering workflows, genre references
