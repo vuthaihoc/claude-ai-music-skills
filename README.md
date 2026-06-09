@@ -54,7 +54,7 @@ Then run `/bitwize-music:setup` to detect your environment and install dependenc
 
 This is where the engineering lives. The plugin is a case study in how far you can push Claude Code's plugin system.
 
-### Skill System (54 Skills)
+### Skill System (53 Skills)
 
 Each skill is a self-contained markdown file with a YAML frontmatter that declares its model, description, and when it should activate. Skills range from simple clipboard operations to multi-step creative workflows. Claude routes to skills automatically based on context, or you invoke them directly with `/bitwize-music:<name>`.
 
@@ -68,9 +68,9 @@ Skills declare which Claude model they need. Creative work that directly impacts
 
 | Tier | Model | Skills | Rationale |
 |------|-------|--------|-----------|
-| Creative | Opus 4.7 | 6 | Lyrics, Suno prompts, album concepts, legal/verification research — output quality defines the music |
-| Reasoning | Sonnet 4.6 | 29 | Research coordination, pronunciation analysis, most workflows |
-| Mechanical | Haiku 4.5 | 18 | Imports, validation, clipboard, help — speed over creativity |
+| Creative | Opus 4.8 | 7 | Lyrics, Suno prompts, album concepts, legal/verification research — output quality defines the music |
+| Reasoning | Sonnet 4.6 | 30 | Research coordination, pronunciation analysis, most workflows |
+| Mechanical | Haiku 4.5 | 16 | Imports, validation, clipboard, help — speed over creativity |
 
 This project pushes Claude Code hard — multi-agent research, real-time audio analysis, sub-agent orchestration across model tiers. It works best on the Max plan. The standard Pro plan will hit rate limits during multi-track sessions.
 
@@ -106,20 +106,20 @@ Nothing ships without passing gates:
 
 ### CI/CD
 
-5 GitHub Actions workflows: test suite (2,482 tests), security scanning (bandit + pip-audit), static validation, auto-release from changelog, and PR target enforcement. Dependabot watches pip and Actions versions weekly.
+5 GitHub Actions workflows: test suite (3,773 tests), security scanning (bandit + pip-audit), static validation, auto-release from changelog, and PR target enforcement. Dependabot watches pip and Actions versions weekly.
 
 ---
 
 ## Project Structure
 
 ```
-skills/              51 skill definitions (markdown + YAML frontmatter)
+skills/              53 skill definitions (markdown + YAML frontmatter)
 servers/             MCP server (Python, 80+ tools)
 tools/               Audio mastering, promo videos, sheet music, cloud uploads
 reference/           46+ docs — Suno guides, mastering workflows, genre references
 genres/              72 genre directories with production guides
 templates/           Album, track, artist, research templates
-tests/               2,482 tests across 14 categories
+tests/               3,773 tests across 14 categories
 config/              Example config and setup docs
 ```
 
@@ -129,7 +129,7 @@ config/              Example config and setup docs
 
 | Topic | Location |
 |-------|----------|
-| All 51 skills | [docs/skills.md](docs/skills.md) |
+| All 53 skills | [docs/skills.md](docs/skills.md) |
 | Configuration | [docs/configuration.md](docs/configuration.md) |
 | Troubleshooting | [docs/troubleshooting.md](docs/troubleshooting.md) |
 | Changelog | [CHANGELOG.md](CHANGELOG.md) |

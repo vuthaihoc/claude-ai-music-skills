@@ -1,6 +1,6 @@
 # Skills Reference
 
-All 52 skills, invoked with `/bitwize-music:<skill-name>`. Claude also uses them automatically when relevant.
+All 53 skills, invoked with `/bitwize-music:<skill-name>`. Claude also uses them automatically when relevant.
 
 ---
 
@@ -9,6 +9,7 @@ All 52 skills, invoked with `/bitwize-music:<skill-name>`. Claude also uses them
 | Skill | Description |
 |-------|-------------|
 | `lyric-writer` | Write/review lyrics with prosody and rhyme checks |
+| `lyric-refiner` | Multi-pass refinement for tightening, cohesion, album unity |
 | `album-conceptualizer` | Album concepts, tracklist architecture, 7 planning phases |
 | `suno-engineer` | Technical Suno V5 prompting and generation settings |
 | `pronunciation-specialist` | Prevent Suno mispronunciations with phonetic spelling |
@@ -67,6 +68,7 @@ The research system is coordinated by a lead `/researcher` skill that dispatches
 | `album-dashboard` | Visual progress overview with percentages |
 | `next-step` | Analyze state, recommend optimal next action |
 | `album-ideas` | Track and manage album idea backlog |
+| `promote-idea` | Promote a pending idea into a full album in one shot |
 | `rename` | Rename album or track, update all paths |
 | `import-audio` | Move audio files to correct album location |
 | `import-track` | Move track markdown files to correct location |
@@ -81,8 +83,8 @@ The research system is coordinated by a lead `/researcher` skill that dispatches
 | `configure` | Interactive config file setup |
 | `tutorial` | Guided album creation walkthrough |
 | `session-start` | Verify setup, load state, report status |
+| `health-check` | On-demand plugin health check — venv + skill registration |
 | `test` | Run automated tests (14 categories) |
-| `skill-model-updater` | Update Claude model references across skills |
 | `genre-creator` | Create new genre documentation with mastering presets |
 | `help` | Available skills, workflows, quick reference |
 | `about` | Plugin version and information |
